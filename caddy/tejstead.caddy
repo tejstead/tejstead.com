@@ -1,0 +1,29 @@
+# tejstead.com apex + catch-all for unrecognized subdomains.
+#
+# Wildcard DNS (*.tejstead.com) points every subdomain at this box. Subdomains
+# with their own site block (elma, math, …) are routed there by SNI/Host and
+# each gets its own automatic HTTP-01 certificate — no registrar API needed.
+#
+# The catch-all for everything else is HTTP-only, deliberately: serving
+# unknown subdomains over HTTPS would require a *.tejstead.com wildcard
+# certificate, which Let's Encrypt only issues via DNS-01 (registrar API key
+# on the box). Not worth it for typo'd subdomains — so http://whatever
+# redirects to the apex, and https://whatever fails the TLS handshake.
+tejstead.com {
+	root * /srv/www/tejstead
+	file_server
+	encode zstd gzip
+	header -Server
+}
+
+# www gets its own block (and its own certificate): it's the one subdomain
+# people actually type, so unlike the catch-all it should work over HTTPS.
+www.tejstead.com {
+	redir https://tejstead.com{uri} permanent
+}
+
+http://*.tejstead.com {
+	# temporary, so a typo'd subdomain isn't cached as a permanent redirect
+	# if it later becomes a real site.
+	redir https://tejstead.com{uri} temporary
+}

@@ -1,0 +1,22 @@
+# Local preview with production-identical file serving (precompressed, cache
+# headers) but no TLS. Run via `make serve-caddy`, then open
+# http://localhost:8081/heilbronn/
+{
+	auto_https off
+}
+
+:8081 {
+	root * /srv
+
+	redir / /heilbronn/ temporary
+
+	@immutable path /heilbronn/assets/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	@pages not path /heilbronn/assets/*
+	header @pages Cache-Control "public, max-age=300, must-revalidate"
+
+	file_server {
+		precompressed br gzip
+	}
+	encode zstd gzip
+}
