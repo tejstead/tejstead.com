@@ -11,6 +11,10 @@
 # redirects to the apex, and https://whatever fails the TLS handshake.
 tejstead.com {
 	root * /srv/www/tejstead
+	# /resume serves the PDF inline under a clean URL; the filename header
+	# keeps "Save as" naming the download sensibly.
+	rewrite /resume /Tej_Stead_Resume.pdf
+	header /resume Content-Disposition "inline; filename=\"Tej_Stead_Resume.pdf\""
 	file_server
 	encode zstd gzip
 	header -Server
