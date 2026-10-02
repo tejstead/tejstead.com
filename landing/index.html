@@ -10,115 +10,164 @@
 <meta property="og:title" content="Tej Stead">
 <meta property="og:description" content="Tej Stead, a software engineer and SRE based in Munich, Germany.">
 <meta name="twitter:card" content="summary">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-9 -9 118 118'%3E%3Cstyle%3E.s%7Bstroke:%23615e57%7D.t%7Bfill:%232f5fb3%7D.p%7Bfill:%231c1b19%7D%40media(prefers-color-scheme:dark)%7B.s%7Bstroke:%23a3a09a%7D.t%7Bfill:%238db0ef%7D.p%7Bfill:%23ecebe7%7D%7D%3C/style%3E%3Crect class='s' width='100' height='100' fill='none' stroke-width='5'/%3E%3Cpath class='t' fill-opacity='.35' d='M0 100 L76.76 100 L100 81.14Z M0 100 L100 0 L23.24 62.28Z M0 100 L100 0 L76.76 37.72Z M0 100 L23.24 0 L23.24 62.28Z M0 100 L23.24 62.28 L76.76 37.72Z M76.76 100 L100 81.14 L76.76 37.72Z M76.76 100 L100 0 L76.76 37.72Z M76.76 100 L0 18.86 L23.24 62.28Z M100 81.14 L23.24 0 L76.76 37.72Z M100 0 L0 18.86 L23.24 0Z M100 0 L23.24 62.28 L76.76 37.72Z M0 18.86 L23.24 0 L23.24 62.28Z'/%3E%3Cg class='p'%3E%3Ccircle cx='0' cy='100' r='8'/%3E%3Ccircle cx='76.76' cy='100' r='8'/%3E%3Ccircle cx='100' cy='81.14' r='8'/%3E%3Ccircle cx='100' cy='0' r='8'/%3E%3Ccircle cx='0' cy='18.86' r='8'/%3E%3Ccircle cx='23.24' cy='0' r='8'/%3E%3Ccircle cx='23.24' cy='62.28' r='8'/%3E%3Ccircle cx='76.76' cy='37.72' r='8'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-9 -9 118 118'%3E%3Cstyle%3E.s%7Bstroke:%2384756c%7D.t%7Bfill:%231f7a4a%7D.p%7Bfill:%23282424%7D%40media(prefers-color-scheme:dark)%7B.s%7Bstroke:%23a8988d%7D.t%7Bfill:%2367cd94%7D.p%7Bfill:%23fff5f0%7D%7D%3C/style%3E%3Crect class='s' width='100' height='100' fill='none' stroke-width='5'/%3E%3Cpath class='t' fill-opacity='.4' d='M0 100 L76.76 100 L100 81.14Z M0 100 L100 0 L23.24 62.28Z M0 100 L100 0 L76.76 37.72Z M0 100 L23.24 0 L23.24 62.28Z M0 100 L23.24 62.28 L76.76 37.72Z M76.76 100 L100 81.14 L76.76 37.72Z M76.76 100 L100 0 L76.76 37.72Z M76.76 100 L0 18.86 L23.24 62.28Z M100 81.14 L23.24 0 L76.76 37.72Z M100 0 L0 18.86 L23.24 0Z M100 0 L23.24 62.28 L76.76 37.72Z M0 18.86 L23.24 0 L23.24 62.28Z'/%3E%3Cg class='p'%3E%3Crect x='-8' y='92' width='16' height='16'/%3E%3Crect x='68.76' y='92' width='16' height='16'/%3E%3Crect x='92' y='73.14' width='16' height='16'/%3E%3Crect x='92' y='-8' width='16' height='16'/%3E%3Crect x='-8' y='10.86' width='16' height='16'/%3E%3Crect x='15.24' y='-8' width='16' height='16'/%3E%3Crect x='15.24' y='54.28' width='16' height='16'/%3E%3Crect x='68.76' y='29.72' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E">
 <style>
 :root {
   color-scheme: light dark;
-  --bg: #fbfaf7;
-  --text: #1c1b19;
-  --muted: #615e57;
-  --rule: #e2dfd8;
-  --card: #ffffff;
-  --accent: #2f5fb3;
-  --fig-line: #8a877f;
-  --fig-fill: rgba(47, 95, 179, .12);
-  --fig-stroke: rgba(47, 95, 179, .55);
+  --bg: #fae9dd;
+  --surface: #fff5f0;
+  --strong: #282424;
+  --text: #45403e;
+  --muted: #84756c;
+  --rule: #d9c3b0;
+  --link: #1f7a4a;
+  --link-hi-bg: #1f7a4a;
+  --link-hi-text: #fff5f0;
+  --shadow: #d9c3b0;
+  --fig-line: #84756c;
+  --fig-fill: rgba(31, 122, 74, .13);
+  --fig-stroke: rgba(31, 122, 74, .6);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #141413;
-    --text: #ecebe7;
-    --muted: #a3a09a;
-    --rule: #2f2e2b;
-    --card: #1b1b19;
-    --accent: #8db0ef;
-    --fig-line: #6f6d67;
-    --fig-fill: rgba(141, 176, 239, .14);
-    --fig-stroke: rgba(141, 176, 239, .6);
+    --bg: #1c1919;
+    --surface: #151313;
+    --strong: #fff5f0;
+    --text: #eed9c8;
+    --muted: #a8988d;
+    --rule: #4a4240;
+    --link: #67cd94;
+    --link-hi-bg: #67cd94;
+    --link-hi-text: #151313;
+    --shadow: #000;
+    --fig-line: #84756c;
+    --fig-fill: rgba(103, 205, 148, .12);
+    --fig-stroke: rgba(103, 205, 148, .6);
   }
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.5;
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.55;
 }
-main { width: 100%; max-width: 34rem; padding: 3rem 1.25rem; }
+.wrap { max-width: 36rem; margin: 0 auto; padding: 0 20px; }
+header.wrap { padding-top: clamp(3rem, 14vh, 8rem); padding-bottom: 2.75rem; }
+.wordmark { display: block; width: 100%; max-width: 30rem; height: auto; margin-bottom: 2rem; }
+.wordmark .ink { fill: var(--strong); }
+.wordmark .drop { fill: var(--shadow); }
 h1 {
   margin: 0;
-  font-size: clamp(1.35rem, 4.5vw, 1.7rem);
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -.01em;
-  text-wrap: balance;
+  max-width: 34ch;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--strong);
 }
-a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .25rem 1.5rem;
-  margin: 1.25rem 0 2.5rem;
-  padding: 0;
-  list-style: none;
-  font-weight: 500;
+a {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
-.links a { text-decoration: none; }
-.links a:hover { text-decoration: underline; }
+a:hover, a:focus-visible { background: var(--link-hi-bg); color: var(--link-hi-text); text-decoration: none; outline: none; }
+.links { display: flex; flex-wrap: wrap; gap: .5rem 2.25rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.bar { border-top: 1px solid var(--muted); border-bottom: 1px solid var(--rule); }
+.bar p { margin: 0; padding: .8rem 0; font-size: .9rem; line-height: 1; text-transform: uppercase; color: var(--muted); }
+section.wrap { display: grid; gap: 1.5rem; padding-top: 2.5rem; padding-bottom: clamp(4rem, 10vw, 6rem); }
 .card {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: 1rem 1.25rem 1rem 1rem;
+  gap: 1.5rem;
+  padding: 1.25rem;
   border: 1px solid var(--rule);
-  border-radius: 10px;
-  background: var(--card);
+  background: var(--surface);
   color: inherit;
+  font-weight: 400;
   text-decoration: none;
-  transition: border-color .15s;
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform .12s, box-shadow .12s;
 }
-.card:hover { border-color: var(--accent); }
-.card svg { flex: none; width: 88px; height: 88px; }
-.card h2 { margin: 0 0 .2rem; font-size: 1rem; font-weight: 600; color: var(--accent); }
-.card p { margin: 0; font-size: .9rem; color: var(--muted); }
-@media (max-width: 400px) {
-  .card { flex-direction: column; align-items: flex-start; gap: .9rem; padding: 1rem; }
+.card:hover, .card:focus-visible { background: var(--surface); color: inherit; border-color: var(--link); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--shadow); }
+.card svg { flex: none; width: 104px; height: 104px; }
+.card h2 { margin: 0 0 .35rem; font-size: 1rem; line-height: 1.35; color: var(--strong); }
+.card:hover h2, .card:focus-visible h2 { color: var(--link); }
+.frames .on { fill: var(--strong); stroke: var(--strong); }
+.card p { margin: 0; font-size: .9rem; line-height: 1.5; }
+@media (max-width: 480px) {
+  .card { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
 }
 </style>
 </head>
 <body>
-<main>
+<header class="wrap">
+  <svg class="wordmark" viewBox="0 0 50.5 7.5" shape-rendering="crispEdges" aria-hidden="true">
+    <path class="drop" transform="translate(.5 .5)" d="M0 0h5v1h-5zM2 1h1v1h-1zM2 2h1v1h-1zM2 3h1v1h-1zM2 4h1v1h-1zM2 5h1v1h-1zM2 6h1v1h-1zM6 0h5v1h-5zM6 1h1v1h-1zM6 2h1v1h-1zM6 3h4v1h-4zM6 4h1v1h-1zM6 5h1v1h-1zM6 6h5v1h-5zM14 0h3v1h-3zM16 1h1v1h-1zM16 2h1v1h-1zM16 3h1v1h-1zM16 4h1v1h-1zM12 5h1v1h-1zM16 5h1v1h-1zM13 6h3v1h-3zM22 0h4v1h-4zM21 1h1v1h-1zM21 2h1v1h-1zM22 3h3v1h-3zM25 4h1v1h-1zM25 5h1v1h-1zM21 6h4v1h-4zM27 0h5v1h-5zM29 1h1v1h-1zM29 2h1v1h-1zM29 3h1v1h-1zM29 4h1v1h-1zM29 5h1v1h-1zM29 6h1v1h-1zM33 0h5v1h-5zM33 1h1v1h-1zM33 2h1v1h-1zM33 3h4v1h-4zM33 4h1v1h-1zM33 5h1v1h-1zM33 6h5v1h-5zM40 0h3v1h-3zM39 1h1v1h-1zM43 1h1v1h-1zM39 2h1v1h-1zM43 2h1v1h-1zM39 3h5v1h-5zM39 4h1v1h-1zM43 4h1v1h-1zM39 5h1v1h-1zM43 5h1v1h-1zM39 6h1v1h-1zM43 6h1v1h-1zM45 0h4v1h-4zM45 1h1v1h-1zM49 1h1v1h-1zM45 2h1v1h-1zM49 2h1v1h-1zM45 3h1v1h-1zM49 3h1v1h-1zM45 4h1v1h-1zM49 4h1v1h-1zM45 5h1v1h-1zM49 5h1v1h-1zM45 6h4v1h-4z"/>
+    <path class="ink" d="M0 0h5v1h-5zM2 1h1v1h-1zM2 2h1v1h-1zM2 3h1v1h-1zM2 4h1v1h-1zM2 5h1v1h-1zM2 6h1v1h-1zM6 0h5v1h-5zM6 1h1v1h-1zM6 2h1v1h-1zM6 3h4v1h-4zM6 4h1v1h-1zM6 5h1v1h-1zM6 6h5v1h-5zM14 0h3v1h-3zM16 1h1v1h-1zM16 2h1v1h-1zM16 3h1v1h-1zM16 4h1v1h-1zM12 5h1v1h-1zM16 5h1v1h-1zM13 6h3v1h-3zM22 0h4v1h-4zM21 1h1v1h-1zM21 2h1v1h-1zM22 3h3v1h-3zM25 4h1v1h-1zM25 5h1v1h-1zM21 6h4v1h-4zM27 0h5v1h-5zM29 1h1v1h-1zM29 2h1v1h-1zM29 3h1v1h-1zM29 4h1v1h-1zM29 5h1v1h-1zM29 6h1v1h-1zM33 0h5v1h-5zM33 1h1v1h-1zM33 2h1v1h-1zM33 3h4v1h-4zM33 4h1v1h-1zM33 5h1v1h-1zM33 6h5v1h-5zM40 0h3v1h-3zM39 1h1v1h-1zM43 1h1v1h-1zM39 2h1v1h-1zM43 2h1v1h-1zM39 3h5v1h-5zM39 4h1v1h-1zM43 4h1v1h-1zM39 5h1v1h-1zM43 5h1v1h-1zM39 6h1v1h-1zM43 6h1v1h-1zM45 0h4v1h-4zM45 1h1v1h-1zM49 1h1v1h-1zM45 2h1v1h-1zM49 2h1v1h-1zM45 3h1v1h-1zM49 3h1v1h-1zM45 4h1v1h-1zM49 4h1v1h-1zM45 5h1v1h-1zM49 5h1v1h-1zM45 6h4v1h-4z"/>
+  </svg>
   <h1>Hi! I'm Tej, a software engineer and SRE currently based in Munich, Germany.</h1>
   <ul class="links">
     <li><a href="/resume">Résumé</a></li>
     <li><a href="https://www.linkedin.com/in/tejstead">LinkedIn</a></li>
     <li><a href="https://github.com/tejstead">GitHub</a></li>
   </ul>
+</header>
+<div class="bar"><div class="wrap"><p>&gt; Projects</p></div></div>
+<section class="wrap">
   <a class="card" href="https://math.tejstead.com/heilbronn/">
     <svg viewBox="-4 -4 108 108" role="img" aria-label="Proven-optimal arrangement of 8 points in the unit square, with its 12 tied smallest triangles shaded; smallest area (√13 − 1)/36">
       <rect width="100" height="100" fill="none" stroke="var(--fig-line)" stroke-width="1"/>
       <path fill="var(--fig-fill)" stroke="var(--fig-stroke)" stroke-width=".6" stroke-linejoin="round" d="M0 100 L76.76 100 L100 81.14Z M0 100 L100 0 L23.24 62.28Z M0 100 L100 0 L76.76 37.72Z M0 100 L23.24 0 L23.24 62.28Z M0 100 L23.24 62.28 L76.76 37.72Z M76.76 100 L100 81.14 L76.76 37.72Z M76.76 100 L100 0 L76.76 37.72Z M76.76 100 L0 18.86 L23.24 62.28Z M100 81.14 L23.24 0 L76.76 37.72Z M100 0 L0 18.86 L23.24 0Z M100 0 L23.24 62.28 L76.76 37.72Z M0 18.86 L23.24 0 L23.24 62.28Z"/>
-      <g fill="var(--text)">
-        <circle cx="0" cy="100" r="2.6"/>
-        <circle cx="76.76" cy="100" r="2.6"/>
-        <circle cx="100" cy="81.14" r="2.6"/>
-        <circle cx="100" cy="0" r="2.6"/>
-        <circle cx="0" cy="18.86" r="2.6"/>
-        <circle cx="23.24" cy="0" r="2.6"/>
-        <circle cx="23.24" cy="62.28" r="2.6"/>
-        <circle cx="76.76" cy="37.72" r="2.6"/>
+      <g fill="var(--strong)" shape-rendering="crispEdges">
+        <rect x="-2.8" y="97.2" width="5.6" height="5.6"/><rect x="73.96" y="97.2" width="5.6" height="5.6"/><rect x="97.2" y="78.34" width="5.6" height="5.6"/><rect x="97.2" y="-2.8" width="5.6" height="5.6"/><rect x="-2.8" y="16.06" width="5.6" height="5.6"/><rect x="20.44" y="-2.8" width="5.6" height="5.6"/><rect x="20.44" y="59.48" width="5.6" height="5.6"/><rect x="73.96" y="34.92" width="5.6" height="5.6"/>
       </g>
     </svg>
     <div>
-      <h2>The Heilbronn triangle problem</h2>
+      <h2>Heilbronn</h2>
       <p>I made a website showing optimal configurations for the Heilbronn problem, a classic math problem in optimization.</p>
     </div>
   </a>
-</main>
+  <a class="card" href="https://24frames.mov/">
+    <svg viewBox="-4 -4 108 108" aria-hidden="true" class="frames">
+      <g fill="var(--fig-fill)" stroke="var(--fig-stroke)" stroke-width=".8" shape-rendering="crispEdges">
+        <rect x="0" y="0.0" width="22" height="13.33"/>
+        <rect x="26" y="0.0" width="22" height="13.33"/>
+        <rect x="52" y="0.0" width="22" height="13.33"/>
+        <rect x="78" y="0.0" width="22" height="13.33"/>
+        <rect x="0" y="17.33" width="22" height="13.33"/>
+        <rect x="26" y="17.33" width="22" height="13.33"/>
+        <rect x="52" y="17.33" width="22" height="13.33"/>
+        <rect x="78" y="17.33" width="22" height="13.33"/>
+        <rect x="0" y="34.67" width="22" height="13.33"/>
+        <rect x="26" y="34.67" width="22" height="13.33"/>
+        <rect x="52" y="34.67" width="22" height="13.33"/>
+        <rect x="78" y="34.67" width="22" height="13.33"/>
+        <rect x="0" y="52.0" width="22" height="13.33"/>
+        <rect x="26" y="52.0" width="22" height="13.33"/>
+        <rect x="52" y="52.0" width="22" height="13.33"/>
+        <rect x="78" y="52.0" width="22" height="13.33"/>
+        <rect x="0" y="69.33" width="22" height="13.33"/>
+        <rect x="26" y="69.33" width="22" height="13.33"/>
+        <rect x="52" y="69.33" width="22" height="13.33"/>
+        <rect x="78" y="69.33" width="22" height="13.33"/>
+        <rect x="0" y="86.67" width="22" height="13.33"/>
+        <rect x="26" y="86.67" width="22" height="13.33"/>
+        <rect x="52" y="86.67" width="22" height="13.33"/>
+        <rect class="on" x="78" y="86.67" width="22" height="13.33"/>
+      </g>
+    </svg>
+    <div>
+      <h2>24frames</h2>
+      <p>I built 24frames, a site for independent filmmakers to publish their films and build a portfolio.</p>
+    </div>
+  </a>
+</section>
 </body>
 </html>
