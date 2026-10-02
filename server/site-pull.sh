@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Pull-based deploy: fetch the latest site build published by the
 # publish-site workflow (rolling "site" release) and sync it into
-# /srv/www/math. Runs on the box from cron every 5 minutes:
+# /srv/www/math. deploy.sh installs it as ~/bin/site-pull.sh on the box,
+# where cron runs it every 5 minutes:
 #
 #   */5 * * * * flock -n /tmp/site-pull.lock $HOME/bin/site-pull.sh >> $HOME/site-pull.log 2>&1
 #

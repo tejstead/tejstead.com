@@ -1,6 +1,6 @@
-# Local preview with production-identical file serving (precompressed, cache
-# headers) but no TLS. Run via `make serve-caddy`, then open
-# http://localhost:8081/heilbronn/
+# Local preview of a heilbronn-site build with the same file serving as
+# math.caddy (precompressed, cache headers) but no TLS. Run via
+# `make serve-math`, then open http://localhost:8081/heilbronn/
 {
 	auto_https off
 }

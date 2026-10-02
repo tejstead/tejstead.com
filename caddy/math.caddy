@@ -1,6 +1,8 @@
-# math.tejstead.com — static site, built by the heilbronn-site repo and
-# rsynced to /srv/www/math. This file is rsynced to /srv/caddy/sites/ by that
-# repo's deploy.sh; never edit it on the server.
+# math.tejstead.com — static site built by the heilbronn-site repo. The
+# server's site-pull.sh syncs each published build into /srv/www/math. This
+# file is rsynced to /srv/caddy/sites/ by deploy.sh; never edit it on the
+# server. The paths below assume heilbronn-site's dist/ layout (heilbronn/,
+# heilbronn/assets/, heilbronn/404.html).
 math.tejstead.com {
 	root * /srv/www/math
 
