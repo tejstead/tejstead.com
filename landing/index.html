@@ -4,32 +4,115 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tej Stead</title>
+<meta name="description" content="Tej Stead, a software engineer and SRE based in Munich, Germany.">
 <style>
-:root { color-scheme: light dark; }
-body {
-  margin: 0; min-height: 100svh; display: grid; place-items: center;
-  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-  background: Canvas; color: CanvasText;
+:root {
+  color-scheme: light dark;
+  --bg: #fbfaf7;
+  --text: #1c1b19;
+  --muted: #615e57;
+  --rule: #e2dfd8;
+  --card: #ffffff;
+  --accent: #2f5fb3;
+  --fig-line: #8a877f;
+  --fig-fill: rgba(47, 95, 179, .12);
+  --fig-stroke: rgba(47, 95, 179, .55);
 }
-main { padding: 2rem; max-width: 32rem; }
-h1 { font-size: 1.6rem; margin: 0 0 .3rem; }
-p { margin: .4rem 0 1.2rem; opacity: .75; }
-ul { list-style: none; padding: 0; margin: 0; }
-li { margin: .55rem 0; }
-a { color: inherit; text-underline-offset: 3px; }
-a:hover { opacity: .7; }
-small { display: block; margin-top: 2rem; opacity: .45; }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141413;
+    --text: #ecebe7;
+    --muted: #a3a09a;
+    --rule: #2f2e2b;
+    --card: #1b1b19;
+    --accent: #8db0ef;
+    --fig-line: #6f6d67;
+    --fig-fill: rgba(141, 176, 239, .14);
+    --fig-stroke: rgba(141, 176, 239, .6);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+main { width: 100%; max-width: 34rem; padding: 3rem 1.25rem; }
+h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 4.5vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.5rem;
+  margin: 1.25rem 0 2.5rem;
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+}
+.links a { text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem 1rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--card);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .15s;
+}
+.card:hover { border-color: var(--accent); }
+.card svg { flex: none; width: 88px; height: 88px; }
+.card h2 { margin: 0 0 .2rem; font-size: 1rem; font-weight: 600; color: var(--accent); }
+.card p { margin: 0; font-size: .9rem; color: var(--muted); }
+@media (max-width: 400px) {
+  .card { flex-direction: column; align-items: flex-start; gap: .9rem; padding: 1rem; }
+}
 </style>
 </head>
 <body>
 <main>
-  <h1>Tej Stead</h1>
-  <p>Things living on this domain:</p>
-  <ul>
-    <li><a href="https://math.tejstead.com/heilbronn/">The Heilbronn problem</a> — configurations, coordinates, proofs, and an interactive viewer</li>
-    <li><a href="/resume">Resume</a> — PDF</li>
+  <h1>Hi! I'm Tej, a software engineer and SRE currently based in Munich, Germany.</h1>
+  <ul class="links">
+    <li><a href="/resume">Résumé</a></li>
+    <li><a href="https://www.linkedin.com/in/tejstead">LinkedIn</a></li>
+    <li><a href="https://github.com/tejstead">GitHub</a></li>
   </ul>
-  <small>tejstead.com</small>
+  <a class="card" href="https://math.tejstead.com/heilbronn/">
+    <svg viewBox="-4 -4 108 108" role="img" aria-label="Proven-optimal arrangement of 8 points in the unit square, with its 12 tied smallest triangles shaded; smallest area (√13 − 1)/36">
+      <rect width="100" height="100" fill="none" stroke="var(--fig-line)" stroke-width="1"/>
+      <path fill="var(--fig-fill)" stroke="var(--fig-stroke)" stroke-width=".6" stroke-linejoin="round" d="M0 100 L76.76 100 L100 81.14Z M0 100 L100 0 L23.24 62.28Z M0 100 L100 0 L76.76 37.72Z M0 100 L23.24 0 L23.24 62.28Z M0 100 L23.24 62.28 L76.76 37.72Z M76.76 100 L100 81.14 L76.76 37.72Z M76.76 100 L100 0 L76.76 37.72Z M76.76 100 L0 18.86 L23.24 62.28Z M100 81.14 L23.24 0 L76.76 37.72Z M100 0 L0 18.86 L23.24 0Z M100 0 L23.24 62.28 L76.76 37.72Z M0 18.86 L23.24 0 L23.24 62.28Z"/>
+      <g fill="var(--text)">
+        <circle cx="0" cy="100" r="2.6"/>
+        <circle cx="76.76" cy="100" r="2.6"/>
+        <circle cx="100" cy="81.14" r="2.6"/>
+        <circle cx="100" cy="0" r="2.6"/>
+        <circle cx="0" cy="18.86" r="2.6"/>
+        <circle cx="23.24" cy="0" r="2.6"/>
+        <circle cx="23.24" cy="62.28" r="2.6"/>
+        <circle cx="76.76" cy="37.72" r="2.6"/>
+      </g>
+    </svg>
+    <div>
+      <h2>The Heilbronn triangle problem</h2>
+      <p>Record configurations for n points in a square, triangle, or convex region, with exact coordinates, links to optimality proofs, and an in-browser verifier.</p>
+    </div>
+  </a>
 </main>
 </body>
 </html>
