@@ -18,7 +18,7 @@ HOST="${HOST:?set HOST=user@server or create host.local}"
 
 rsync -az landing/ "$HOST":/srv/www/tejstead/
 rsync -az caddy/math.caddy caddy/tejstead.caddy "$HOST":/srv/caddy/sites/
-rsync -az --chmod=F755 server/site-pull.sh "$HOST":bin/site-pull.sh
+rsync -az server/site-pull.sh "$HOST":bin/site-pull.sh
 
 ssh "$HOST" 'cd /opt/elma \
   && docker compose exec caddy caddy validate --config /etc/caddy/Caddyfile \
